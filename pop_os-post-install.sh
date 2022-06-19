@@ -60,6 +60,7 @@ PACOTES_APT=(
   liballegro5-dev
   libvulkan1
   libvulkan1:i386
+  lutris
   neofetch
   qbittorrent
   ubuntu-restricted-extras
@@ -68,6 +69,7 @@ PACOTES_APT=(
   steam-installer
   steam-devices
   steam:i386
+  wine
 )
 
 PACOTES_FLATPAK=(
@@ -213,5 +215,3 @@ adicionar_repositorios_flatpak
 instalar_pacotes_flatpak
 instalar_driver_TPLinkT2UPlus
 upgrade_e_limpeza_sistema
-# ------------------------------------------------------------------------ #
-
