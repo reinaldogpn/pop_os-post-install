@@ -44,6 +44,7 @@
 # ***** PROGRAMAS *****
 PACOTES_APT=(
   calibre
+  chrome-gnome-shell
   code
   dconf-editor
   discord
@@ -85,6 +86,9 @@ AMARELO='\e[1;93m'
 VERMELHO='\e[1;91m'
 VERDE='\e[1;92m'
 SEM_COR='\e[0m'
+
+# ***** EXTRA *****
+FILE="/home/$USER/.config/gtk-3.0/bookmarks"
 
 # ------------------------------ TESTES ---------------------------------- #
 # Internet conectando?
@@ -188,6 +192,20 @@ instalar_driver_TPLinkT2UPlus()
   echo -e "${VERDE}[INFO] - Driver wi-fi instalado!${SEM_COR}"
 }
 
+extra_config()
+{
+  echo -e "${AMARELO}[INFO] - Criando diretórios pessoais...${SEM_COR}"
+  mkdir /home/$USER/Projetos
+  #Adiciona atalhos ao Nautilus
+  if test -f "$FILE"; then
+      echo -e "${VERDE}[INFO] - $FILE já existe.${SEM_COR}"
+  else
+      echo -e "${AMARELO}[INFO] - $FILE não existe. Criando...${SEM_COR}"
+      touch /home/$USER/.config/gkt-3.0/bookmarks
+  fi
+  echo "file:///home/$USER/Projetos 🔵 Projetos" >> $FILE
+}
+
 upgrade_e_limpeza_sistema()
 {
   echo -e "${AMARELO}[INFO] - Fazendo upgrade e limpeza do sistema ...${SEM_COR}"
@@ -214,4 +232,5 @@ instalar_dependencias_allegro
 adicionar_repositorios_flatpak
 instalar_pacotes_flatpak
 instalar_driver_TPLinkT2UPlus
+extra_config
 upgrade_e_limpeza_sistema
