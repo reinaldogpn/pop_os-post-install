@@ -1,0 +1,23 @@
+Compiler settings for Allegro 5.2
+
+... > Compiler settings > Linker settings
+
+Link libraries:
+
+/usr/lib/x86_64-linux-gnu/liballegro.so
+/usr/lib/x86_64-linux-gnu/liballegro_acodec.so
+/usr/lib/x86_64-linux-gnu/liballegro_audio.so
+/usr/lib/x86_64-linux-gnu/liballegro_color.so
+/usr/lib/x86_64-linux-gnu/liballegro_dialog.so
+/usr/lib/x86_64-linux-gnu/liballegro_font.so
+/usr/lib/x86_64-linux-gnu/liballegro_image.so
+/usr/lib/x86_64-linux-gnu/liballegro_main.so
+/usr/lib/x86_64-linux-gnu/liballegro_memfile.so
+/usr/lib/x86_64-linux-gnu/liballegro_physfs.so
+/usr/lib/x86_64-linux-gnu/liballegro_primitives.so
+/usr/lib/x86_64-linux-gnu/liballegro_ttf.so
+/usr/lib/x86_64-linux-gnu/liballegro_video.so
+
+Other linker options:
+
+`pkg-config --libs allegro-5.0`
