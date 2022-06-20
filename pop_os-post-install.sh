@@ -44,16 +44,16 @@
 # ***** PROGRAMAS *****
 PACOTES_APT=(
   calibre
-  chrome-gnome-shell
   code
   dconf-editor
   discord
   flatpak
+  google-chrome-stable
+  chrome-gnome-shell
   gnome-software
   gnome-software-plugin-flatpak
   gnome-sushi
   gnome-tweaks
-  gnome-shell-extension-dash-to-dock-pop
   codeblocks
   gimp
   inkscape
@@ -75,7 +75,6 @@ PACOTES_APT=(
 
 PACOTES_FLATPAK=(
   app.ytmdesktop.ytmdesktop
-  com.google.Chrome
   io.github.mimbrero.WhatsAppDesktop
   org.onlyoffice.desktopeditors
 # com.mojang.Minecraft 			    # Minecraft
