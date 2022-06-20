@@ -88,10 +88,17 @@ SEM_COR='\e[0m'
 # ***** EXTRA *****
 FILE="/home/$USER/.config/gtk-3.0/bookmarks"
 
+# Inserir o diretório e o alias respectivamente
 DIRETORIOS=(
-  /home/$USER/'👨🏻‍💻 Projetos'
-  /home/$USER/'🤖 GitHub'
-  /home/$USER/'🧰 Utilidades'
+/home/$USER/Projetos
+/home/$USER/GitHub
+/home/$USER/Utilidades
+)
+
+ALIASES=(
+"/home/$USER/Projetos 👨🏻‍💻 Projetos" 
+"/home/$USER/GitHub 🤖 GitHub" 
+"/home/$USER/Utilidades 🧰 Utilidades"
 )
 
 # ------------------------------ TESTES ---------------------------------- #
@@ -203,11 +210,13 @@ extra_config()
       echo -e "${VERDE}[INFO] - $FILE já existe.${SEM_COR}"
   else
       echo -e "${AMARELO}[INFO] - $FILE não existe. Criando...${SEM_COR}"
-      touch /home/$USER/.config/gkt-3.0/bookmarks
+      touch /home/$USER/.config/gkt-3.0/bookmarks &> /dev/null
   fi
   for diretorio in ${DIRETORIOS[@]}; do
     mkdir $diretorio
-    echo "file://$diretorio" >> $FILE
+  done
+  for _alias in "${ALIASES[@]}"; do
+    echo file://$_alias >> $FILE
   done
 }
 
