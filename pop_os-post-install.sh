@@ -77,7 +77,6 @@ PACOTES_FLATPAK=(
   app.ytmdesktop.ytmdesktop
   io.github.mimbrero.WhatsAppDesktop
   org.onlyoffice.desktopeditors
-# com.mojang.Minecraft 			    # Minecraft
 )
 
 # ***** CORES *****
