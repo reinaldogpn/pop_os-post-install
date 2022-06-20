@@ -201,7 +201,7 @@ extra_config()
       echo -e "${AMARELO}[INFO] - $FILE não existe. Criando...${SEM_COR}"
       touch /home/$USER/.config/gkt-3.0/bookmarks
   fi
-  echo "file:///home/$USER/Projetos 🔵 Projetos" >> $FILE
+  echo "file:///home/$USER/Projetos 👨🏻‍💻 Projetos" >> $FILE
 }
 
 upgrade_e_limpeza_sistema()
