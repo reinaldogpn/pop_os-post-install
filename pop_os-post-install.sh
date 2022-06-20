@@ -88,6 +88,12 @@ SEM_COR='\e[0m'
 # ***** EXTRA *****
 FILE="/home/$USER/.config/gtk-3.0/bookmarks"
 
+DIRETORIOS=(
+  /home/$USER/'👨🏻‍💻 Projetos'
+  /home/$USER/'🤖 GitHub'
+  /home/$USER/'🧰 Utilidades'
+)
+
 # ------------------------------ TESTES ---------------------------------- #
 # Internet conectando?
 if ! ping -c 1 8.8.8.8 -q &> /dev/null; then
@@ -193,15 +199,16 @@ instalar_driver_TPLinkT2UPlus()
 extra_config()
 {
   echo -e "${AMARELO}[INFO] - Criando diretórios pessoais...${SEM_COR}"
-  mkdir /home/$USER/Projetos
-  #Adiciona atalhos ao Nautilus
   if test -f "$FILE"; then
       echo -e "${VERDE}[INFO] - $FILE já existe.${SEM_COR}"
   else
       echo -e "${AMARELO}[INFO] - $FILE não existe. Criando...${SEM_COR}"
       touch /home/$USER/.config/gkt-3.0/bookmarks
   fi
-  echo "file:///home/$USER/Projetos 👨🏻‍💻 Projetos" >> $FILE
+  for diretorio in ${DIRETORIOS[@]}; do
+    mkdir $diretorio
+    echo "file://$diretorio" >> $FILE
+  done
 }
 
 upgrade_e_limpeza_sistema()
