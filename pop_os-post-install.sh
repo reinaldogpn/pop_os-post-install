@@ -47,6 +47,7 @@ PACOTES_APT=(
   code
   dconf-editor
   discord
+  drawing
   flatpak
   google-chrome-stable
   chrome-gnome-shell
